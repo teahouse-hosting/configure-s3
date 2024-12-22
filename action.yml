@@ -1,18 +1,17 @@
-name: Hello, World!
-description: Greet someone and record the time
-author: GitHub Actions
+name: Configure S3
+description: Get the S3 settings for Teahouse
+author: Teahouse
 
 # Define your inputs here.
 inputs:
-  who-to-greet:
-    description: Who to greet
+  domain:
+    description: Website to update
     required: true
-    default: World
 
 # Define your outputs here.
 outputs:
-  time:
-    description: The time we greeted you
+  bucket:
+    description: The name of the bucket to upload to
 
 runs:
   using: node20

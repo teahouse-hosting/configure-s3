@@ -15,7 +15,7 @@ async function run() {
     const oidc_token = await core.getIDToken()
 
     core.info(`Configuring upload for ${domain}`)
-    const http = http_client.HttpClient()
+    const http = new http_client.HttpClient()
     const resp = await http.postJson(`${server}/upload/get-s3-config`, {
       token: oidc_token,
       domain

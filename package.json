@@ -1,21 +1,19 @@
 {
-  "name": "hello-world-javascript-action",
-  "description": "This action prints `Hello, World!` or `Hello, <who-to-greet>!` to the log",
+  "name": "teahouse-configure-s3",
+  "description": "This action configures S3 to upload to Teahouse",
   "version": "1.0.0",
   "author": "",
   "private": true,
-  "homepage": "https://github.com/actions/hello-world-javascript-action#readme",
+  "homepage": "https://teahouse.cafe/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/hello-world-javascript-action.git"
+    "url": "git+https://github.com/teahouse-hosting/configure-s3.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/hello-world-javascript-action/issues"
+    "url": "https://github.com/teahouse-hosting/configure-s3/issues"
   },
   "keywords": [
-    "GitHub",
-    "Actions",
-    "JavaScript"
+    "Teahouse"
   ],
   "exports": {
     ".": "./dist/index.js"
@@ -65,7 +63,8 @@
   },
   "dependencies": {
     "@actions/core": "^1.11.1",
-    "@actions/github": "^6.0.0"
+    "@actions/github": "^6.0.0",
+    "@actions/http-client": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",

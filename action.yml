@@ -16,3 +16,11 @@ outputs:
 runs:
   using: node20
   main: dist/index.js
+
+branding:
+  color: purple
+  icon: key
+
+
+# permissions:
+#   id-token: write

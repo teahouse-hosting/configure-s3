@@ -20,7 +20,5 @@ runs:
 branding:
   color: purple
   icon: key
-
-
 # permissions:
 #   id-token: write

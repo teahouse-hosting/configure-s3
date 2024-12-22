@@ -20,6 +20,9 @@ async function run() {
       token: oidc_token,
       domain
     })
+    if (resp.statusCode != 200) {
+      core.setFailed(`Got an HTTP ${resp.statusCode} from Teahouse`)
+    }
     const envvars = resp.result
 
     if (envvars.AWS_ACCESS_KEY_ID) {

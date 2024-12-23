@@ -10,7 +10,7 @@ async function run() {
   try {
     // The `domain` input is defined in action metadata file
     const domain = core.getInput('domain', { required: true })
-    const server = core.getInput('server') || 'https://admin.teahouse.cafe'
+    const server = core.getInput('server') || 'https://counter.teahouse.cafe'
     core.debug('Getting OIDC token')
     const oidc_token = await core.getIDToken()
 

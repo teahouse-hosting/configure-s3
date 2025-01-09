@@ -8,6 +8,9 @@
 
 - From your folder `cd configure-s3`
 - To download your dependancies `npm install`
+
+### Testing
+
 - To view list of all runnable scripts `npm run`
 - To run all avalible tests `npm run test`
 - To run Prettier formatting `npm run format:write`

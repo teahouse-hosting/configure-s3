@@ -1,12 +1,12 @@
-const core = require('@actions/core')
-const github = require('@actions/github')
+import * as core from '@actions/core'
+import * as github from '@actions/github'
 const http_client = require('@actions/http-client')
 
 /**
  * The main function for the action.
  * @returns {Promise<void>} Resolves when the action is complete.
  */
-async function run() {
+export async function run() {
   try {
     // The `domain` input is defined in action metadata file
     const domain = core.getInput('domain', { required: true })
@@ -51,8 +51,4 @@ async function run() {
     // Fail the workflow step if an error occurs
     core.setFailed(error.message)
   }
-}
-
-module.exports = {
-  run
 }

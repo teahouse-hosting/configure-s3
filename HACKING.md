@@ -11,8 +11,9 @@
 
 ### Testing
 
-- To view list of all runnable scripts `npm run`
-- To run all avalible tests `npm run test`
-- To run Prettier formatting `npm run format:write`
-- To run eslint `npm run lint`
-- To run everything `npm run all`
+- To view list of all runnable scripts `npx just`
+- To run all avalible tests `npx just ci_test`
+- To run Prettier formatting `npx just format_write`
+- To run eslint `npx just lint`
+
+- To run everything `npm run all` currently not working

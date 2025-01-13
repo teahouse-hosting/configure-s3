@@ -1,0 +1,30 @@
+set windows-powershell := true
+
+# Show this help
+@help:
+  just --list --list-submodules
+
+# test just is working
+start:
+    @echo "Hello just World"
+
+@print_home:
+    echo "HOME is: '${HOME}'"
+
+# eslint
+@lint:
+    npx eslint .
+
+# Prettier
+format_write: 
+    npx prettier --write .
+    
+format_check: 
+    npx prettier --check .
+
+
+# CITest
+export NODE_OPTIONS:="--experimental-vm-modules"
+export NODE_NO_WARNINGS:="1"
+ci_test:
+    npx jest

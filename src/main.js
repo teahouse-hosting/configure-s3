@@ -15,12 +15,15 @@ async function run() {
     const oidc_token = await core.getIDToken()
 
     core.info(`Configuring upload for ${domain}`)
-    const http = new http_client.HttpClient()
+    const http = new http_client.HttpClient('configure-s3', [], {
+      headers: {
+        Authorization: `Bearer ${oidc_token}`
+      }
+    })
     const resp = await http.postJson(`${server}/upload/get-s3-config`, {
-      token: oidc_token,
       domain
     })
-    if (resp.statusCode != 200) {
+    if (resp.statusCode !== 200) {
       core.setFailed(`Got an HTTP ${resp.statusCode} from Teahouse`)
     }
     const envvars = resp.result

@@ -51,7 +51,7 @@ async function run() {
       core.setOutput('bucket', envvars.BUCKET_NAME)
     }
   } catch (error) {
-    console.trace("Error in configuring")
+    core.error(error.stack)
     // Fail the workflow step if an error occurs
     core.setFailed(error.message)
   }

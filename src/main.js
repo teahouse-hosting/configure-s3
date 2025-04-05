@@ -51,7 +51,7 @@ async function run() {
       core.setOutput('bucket', envvars.BUCKET_NAME)
     }
   } catch (error) {
-    core.error(error.stack)
+    core.info(error.stack)
     // Fail the workflow step if an error occurs
     core.setFailed(error.message)
   }
